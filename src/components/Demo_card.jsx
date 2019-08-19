@@ -72,23 +72,17 @@ const Secret = styled(Greeting)`
   }
 `;
 
-class Demo_card extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const { greeting, language } = this.props;
-    return (
-      <Card>
-        <Greeting>{greeting}</Greeting>
-        <Go_corner>
-          <StyledIcon icon="dice-d20" />
-        </Go_corner>
-        <Secret>{language}</Secret>
-      </Card>
-    );
-  }
+function Demo_card(props) {
+  const { greeting, language } = props;
+  return (
+    <Card>
+      <Greeting>{greeting}</Greeting>
+      <Go_corner>
+        <StyledIcon icon="dice-d20" />
+      </Go_corner>
+      <Secret>{language}</Secret>
+    </Card>
+  );
 }
 
 export default Demo_card;
